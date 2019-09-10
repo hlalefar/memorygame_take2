@@ -1,26 +1,49 @@
+//confirmation that JS file is working
 console.log("Up and running!");
-// console.log("User flipped" + " " + cardOne);
-// console.log("User flipped" + " " + cardThree);
 
-const cards = ['queen', 'queen', 'king', 'king'];
+//cards objects in cards array
+const cards = [
+{
+rank: 'queen',
+suite: 'hearts',
+cardImage: "images/queen-of-hearts.png"
+},
+{
+rank: 'queen',
+suite: 'diamonds',
+cardImage: "images/queen-of-diamonds.png"
+},
+{
+rank: 'king',
+suite: 'hearts',
+cardImage: "images/king-of-hearts.png"
+},
+{
+rank: 'king',
+suite: 'diamonds',
+cardImage: "images/king-of-diamonds.png"
+}
+]
+
+//cards. being played storage array
 const cardsInPlay = [];
 
-var cardOne = cards[0];
-cardsInPlay.push(cardOne);
-console.log("User flipped queen")
-
-var cardTwo = cards[2];
-cardsInPlay.push(cardTwo);
-console.log("User flipped king");
-
-if (cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay[1]) {
-		alert("You found a match!");
-	} else {alert("Sorry, try again.");
+//function to confirm whether the two flipped cards are a match or not
+function checkForMatch() {
+	if (cardsInPlay[0] === cardsInPlay[1]) {
+  console.log("You found a match!");
+} else {
+  console.log("Sorry, try again.");}
 }
+//function that ""
+function flipCard(cardId){
+	cardsInPlay.push(cards[cardId].rank);
+	console.log("User flipped" + " " + cards[cardId].rank);
+	console.log(cards[cardId].cardImage);
+	console.log(cards[cardId].suite);
+	checkForMatch();
+	}
 
-
-
-
-
-
-// Test out storing different cards in the cardOne and cardTwo variables to make sure that everything is up and running!
+//calling the flipCard function here
+flipCard(0);
+flipCard(1);
