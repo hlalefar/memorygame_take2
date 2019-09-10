@@ -14,7 +14,6 @@ h2 {
 	font-weight: 600;
 	font-size: 20px;
 	text-align: center;
-	padding-top: -20px;
 }
 p {
 	font-family: Raleway;
@@ -38,14 +37,14 @@ nav {
 a:hover {
 	border-color: white;
 }
-body {
-	text-align: center;
-	margin: 0;
-}
 header {
 	background-color: #F15B31;
 	color: #FFFFFF;
 	padding: 30px 20px;
+}
+body {
+	text-align: center;
+	margin: 0;
 }
 main {
 	width: 850px;
